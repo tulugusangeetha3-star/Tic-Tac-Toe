@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #1a1a2e;
+    background: #e4e3d1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
@@ -69,7 +69,7 @@ body {
 }
 
 .robot-btn:hover {
-    background: #0096c7;
+    background: #3f0cbe;
     transform: scale(1.02);
 }
 
@@ -125,13 +125,13 @@ body {
 }
 
 .cell:hover {
-    background: #00b4d8;
+    background: #f522e7;
     transform: scale(1.03);
 }
 
 /* Green for O, Red for X */
 .cell.player-o {
-    color: #00c853 !important; 
+    color: #1df176 !important; 
 }
 
 .cell.player-x {
@@ -194,7 +194,7 @@ body {
     border: none;
     border-radius: 10px;
     padding: 14px;
-    background: #2ec4b6;
+    background: #33f4e1;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -203,7 +203,7 @@ body {
 }
 
 #playAgain:hover {
-    background: #25a18e;
+    background: #26f1d3;
 }
 
 #exitButtonFinal {
