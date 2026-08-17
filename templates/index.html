@@ -3,34 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-Tac-Toe</title>
+    <title>Tic-Tac-Toe Game</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="game-container">
-        <h1>TIC-TAC-TOE</h1>
-        <div class="subtitle">
-            You are <span class="player-symbol">O</span> • Computer is <span class="computer-symbol">X</span>
+
+    <!-- SCREEN 1: HOME / MODE SELECT -->
+    <div id="home-screen" class="screen active">
+        <h1 class="welcome-title">WELCOME!<br><span>TIC-TAC-TOE GAME</span></h1>
+        <div class="menu-buttons">
+            <button class="menu-btn robot-btn" onclick="setGameMode('robot')">🤖 Play with Robot</button>
+            <button class="menu-btn friend-btn" onclick="setGameMode('friend')">👥 Play with Friends</button>
         </div>
-        <div id="status">Your turn!</div>
-        
+    </div>
+
+    <!-- SCREEN 2: GAME BOARD -->
+    <div id="game-screen" class="screen">
+        <h1 class="game-title">TIC-TAC-TOE</h1>
+        <div id="status" class="subtitle">Your turn!</div>
+
         <div id="board">
-            <div class="cell" onclick="makeMove(0)"></div>
-            <div class="cell" onclick="makeMove(1)"></div>
-            <div class="cell" onclick="makeMove(2)"></div>
-            <div class="cell" onclick="makeMove(3)"></div>
-            <div class="cell" onclick="makeMove(4)"></div>
-            <div class="cell" onclick="makeMove(5)"></div>
-            <div class="cell" onclick="makeMove(6)"></div>
-            <div class="cell" onclick="makeMove(7)"></div>
-            <div class="cell" onclick="makeMove(8)"></div>
+            <div class="cell" onclick="cellClicked(0)"></div>
+            <div class="cell" onclick="cellClicked(1)"></div>
+            <div class="cell" onclick="cellClicked(2)"></div>
+            <div class="cell" onclick="cellClicked(3)"></div>
+            <div class="cell" onclick="cellClicked(4)"></div>
+            <div class="cell" onclick="cellClicked(5)"></div>
+            <div class="cell" onclick="cellClicked(6)"></div>
+            <div class="cell" onclick="cellClicked(7)"></div>
+            <div class="cell" onclick="cellClicked(8)"></div>
         </div>
 
         <div class="controls">
-            <button id="playAgain" onclick="playAgain()">🔄 PLAY AGAIN</button>
-            <button id="exitButton" onclick="exitGame()">EXIT</button>
+            <button id="exitButton" onclick="goHome()">🏠 HOME / EXIT</button>
         </div>
     </div>
+
+    <!-- SCREEN 3: WIN CELEBRATION -->
+    <div id="win-screen" class="screen">
+        <canvas id="confetti-canvas"></canvas>
+        <div class="win-card">
+            <h1 class="wow-title">🎉 WOW YOU WIN! 🎉</h1>
+            <div id="winner-name-display" class="winner-name">Winner: Player O</div>
+            <div class="win-controls">
+                <button id="playAgain" onclick="restartGame()">🔄 PLAY AGAIN</button>
+                <button id="exitButtonFinal" onclick="goHome()">EXIT</button>
+            </div>
+        </div>
+    </div>
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
