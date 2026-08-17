@@ -7,20 +7,15 @@ const statusDisplay = document.getElementById('status');
 function makeMove(index) {
     if (!isGameActive || board[index] !== "") return;
 
-    // Update local state with player move ('O')
     board[index] = "O";
     updateBoardUI();
 
-    // Lock board while waiting for computer response
     isGameActive = false;
     statusDisplay.innerText = "Computer's turn...";
 
-    // Send board state to Flask backend
     fetch('/move', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ board: board })
     })
     .then(response => response.json())
@@ -52,7 +47,6 @@ function updateBoardUI() {
     cells.forEach((cell, index) => {
         cell.innerText = board[index];
         cell.classList.remove('player', 'computer', 'winner');
-        
         if (board[index] === 'O') {
             cell.classList.add('player');
         } else if (board[index] === 'X') {
@@ -85,9 +79,7 @@ function highlightWinners(positions) {
 function playAgain() {
     fetch('/reset', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        headers: { 'Content-Type': 'application/json' }
     })
     .then(response => response.json())
     .then(() => {

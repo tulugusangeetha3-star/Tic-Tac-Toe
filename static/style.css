@@ -18,20 +18,23 @@ body {
     width: 380px;
     max-width: 95%;
     text-align: center;
-    padding: 20px;
+    background: #292a2d;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-bottom: 10px;
-    color: white;
+    margin-bottom: 8px;
+    color: #ffffff;
 }
 
 .subtitle {
-    color: #bbbbbb;
-    font-size: 15px;
+    color: #aaaaaa;
+    font-size: 14px;
     margin-bottom: 20px;
 }
 
@@ -48,7 +51,7 @@ h1 {
 #status {
     min-height: 28px;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #61dafb;
 }
@@ -57,29 +60,29 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    background: #2c2d30;
+    background: #1e1f22;
     padding: 12px;
-    border-radius: 14px;
-    margin-bottom: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
 }
 
 .cell {
-    background: white;
-    color: #202124;
-    height: 100px;
-    border-radius: 10px;
-    font-size: 50px;
+    background: #3c4043;
+    color: white;
+    height: 90px;
+    border-radius: 8px;
+    font-size: 45px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     user-select: none;
-    transition: 0.15s;
+    transition: background 0.2s, transform 0.1s;
 }
 
 .cell:hover {
-    background: #eeeeee;
+    background: #5f6368;
     transform: scale(1.03);
 }
 
@@ -94,20 +97,19 @@ h1 {
 .cell.winner {
     background: #2ecc71 !important;
     color: white !important;
-    transform: scale(1.05);
 }
 
 .controls {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     align-items: center;
 }
 
 #playAgain {
     border: none;
     border-radius: 8px;
-    padding: 12px 30px;
+    padding: 12px;
     background: #3498db;
     color: white;
     font-size: 16px;
@@ -118,15 +120,14 @@ h1 {
 }
 
 #playAgain:hover {
-    background: #2980b9;
-    transform: scale(1.02);
+    background: #3ce21b;
 }
 
 #exitButton {
     border: none;
     border-radius: 8px;
-    padding: 10px 30px;
-    background: #e74c3c;
+    padding: 10px;
+    background: #f4240d;
     color: white;
     font-size: 14px;
     cursor: pointer;
@@ -136,5 +137,4 @@ h1 {
 
 #exitButton:hover {
     background: #c0392b;
-    transform: scale(1.02);
 }
