@@ -1,54 +1,15 @@
-# 🎮 Smart Tic-Tac-Toe
+# Flask Tic-Tac-Toe
 
-A small web-based Tic-Tac-Toe game built using Python Flask, HTML, CSS, and JavaScript.
+A simple web-based Tic-Tac-Toe game built with Flask (Python), HTML5, CSS3, and JavaScript. You play as 'O' against a computer opponent playing as 'X'.
 
-The player uses **O** and the computer uses **X**.
-
----
-
-## 📌 Features
-
-- Player vs Computer
-- Player uses O
-- Computer uses X
-- Smart computer opponent
-- Computer tries to win
-- Computer blocks the player's winning move
-- Computer prefers the center
-- Computer chooses corners
-- Win detection
-- Draw detection
-- Winning cells are highlighted
-- Play Again button
-- Responsive design
-- Flask backend
-- HTML/CSS/JavaScript frontend
-
----
-
-## 🛠️ Technologies Used
-
-- Python
-- Flask
-- HTML5
-- CSS3
-- JavaScript
-
----
-
-## 📁 Project Structure
-
+## Project Structure
 ```text
-Tic-Tac-Toe/
-│
-├── app.py
-│
-├── templates/
-│   └── index.html
+Tic Tac Toe/
 │
 ├── static/
-│   ├── style.css
-│   └── script.js
-│
-└── README.md"# Tic-Tac-Toe" 
-"# Tic-Tac-Toe" 
+│   ├── script.js
+│   └── style.css
+├── templates/
+│   └── index.html
+├── app.py
+└── README.md
