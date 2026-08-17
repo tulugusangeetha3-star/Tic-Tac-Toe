@@ -1,0 +1,328 @@
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #202124;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+}
+
+
+/* ==========================================
+   GAME CONTAINER
+========================================== */
+
+.game-container {
+    width: 430px;
+    max-width: 92%;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+h1 {
+    font-size: 38px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+    color: white;
+}
+
+
+/* ==========================================
+   SUBTITLE
+========================================== */
+
+.subtitle {
+    color: #bbbbbb;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.player-symbol {
+    color: #3498db;
+
+    font-weight: bold;
+}
+
+
+.computer-symbol {
+    color: #e74c3c;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+#status {
+    min-height: 28px;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #61dafb;
+}
+
+
+/* ==========================================
+   GAME BOARD
+========================================== */
+
+#board {
+    width: 390px;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+
+/* ==========================================
+   GAME CELLS
+========================================== */
+
+.cell {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #202124;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 55px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: 0.15s;
+}
+
+
+/* ==========================================
+   CELL HOVER
+========================================== */
+
+.cell:hover:not(:disabled) {
+    background: #eeeeee;
+
+    transform: scale(1.03);
+}
+
+
+/* ==========================================
+   PLAYER O
+========================================== */
+
+.cell.player {
+    color: #3498db;
+}
+
+
+/* ==========================================
+   COMPUTER X
+========================================== */
+
+.cell.computer {
+    color: #e74c3c;
+}
+
+
+/* ==========================================
+   WINNING CELLS
+========================================== */
+
+.cell.winner {
+    background: #2ecc71;
+
+    color: white;
+
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   CONTROLS
+========================================== */
+
+.controls {
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* ==========================================
+   PLAY AGAIN BUTTON
+========================================== */
+
+#playAgain {
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 12px 30px;
+
+    background: #3498db;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+#playAgain:hover {
+    background: #2980b9;
+
+    transform: scale(1.03);
+}
+
+
+/* ==========================================
+   EXIT BUTTON
+========================================== */
+
+#exitButton {
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 9px 30px;
+
+    background: #e74c3c;
+
+    color: white;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+#exitButton:hover {
+    background: #c0392b;
+
+    transform: scale(1.03);
+}
+
+
+/* ==========================================
+   DISABLED CELL
+========================================== */
+
+.cell:disabled {
+    cursor: default;
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 500px) {
+
+    .game-container {
+        width: 95%;
+
+        padding: 20px 10px;
+    }
+
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+
+    #status {
+        font-size: 18px;
+    }
+
+
+    #board {
+        gap: 7px;
+    }
+
+
+    .cell {
+        font-size: 42px;
+
+        border-radius: 9px;
+    }
+
+}

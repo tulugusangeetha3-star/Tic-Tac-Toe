@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Tic-Tac-Toe</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+    <main class="game-container">
+
+        <!-- TITLE -->
+
+        <h1>TIC-TAC-TOE</h1>
+
+
+        <p class="subtitle">
+
+            You are
+            <span class="player-symbol">O</span>
+
+            •
+
+            Computer is
+            <span class="computer-symbol">X</span>
+
+        </p>
+
+
+        <!-- STATUS -->
+
+        <p id="status">
+            Your turn!
+        </p>
+
+
+        <!-- GAME BOARD -->
+
+        <div id="board">
+
+            <button class="cell" data-index="0"></button>
+
+            <button class="cell" data-index="1"></button>
+
+            <button class="cell" data-index="2"></button>
+
+
+            <button class="cell" data-index="3"></button>
+
+            <button class="cell" data-index="4"></button>
+
+            <button class="cell" data-index="5"></button>
+
+
+            <button class="cell" data-index="6"></button>
+
+            <button class="cell" data-index="7"></button>
+
+            <button class="cell" data-index="8"></button>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="controls">
+
+            <button id="playAgain">
+                🔄 PLAY AGAIN
+            </button>
+
+            <button id="exitButton">
+                EXIT
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
