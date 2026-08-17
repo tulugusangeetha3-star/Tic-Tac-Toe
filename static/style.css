@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #37ee46;
+    background: #2a54e0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
@@ -74,7 +74,7 @@ body {
 }
 
 .friend-btn {
-    background: #2ec4b6;
+    background: #08aa9a;
 }
 
 .friend-btn:hover {
